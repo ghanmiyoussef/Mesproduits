@@ -8,10 +8,11 @@ import { AddProduits } from './add-produits/add-produits';
 import { Pagenodefond } from './pagenodefond/pagenodefond';
 import { FormsModule } from '@angular/forms';
 import { UpdateProduit } from './update-produit/update-produit';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [App, Navbar, Produits, AddProduits, Pagenodefond, UpdateProduit],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule,HttpClientModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })

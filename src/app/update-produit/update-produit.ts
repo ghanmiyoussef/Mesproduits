@@ -17,17 +17,17 @@ export class UpdateProduit implements OnInit {
     private produitService: Serviceproduit) {}
 
   ngOnInit(): void {
-    this.currentProduit = this.produitService.consulterProduit(this.activatedRoute.snapshot.params['id']);
-    console.log(this.currentProduit);
+    /*this.currentProduit = this.produitService.consulterProduit(this.activatedRoute.snapshot.params['id']);
+    console.log(this.currentProduit);*/
 
   }
 
-  updateProduit() {
+ /* updateProduit() {
     this.produitService.updateProduit(this.currentProduit);
     this.router.navigate(['prod']);
 
 
-  }
+  }*/
 
 
 

@@ -18,9 +18,9 @@ constructor(private serviceproduit: Serviceproduit,private router: Router) {
   }
 
 
-  addProduit(){
-    this.serviceproduit.ajouterProduit(this.newProduit);
-    this.router.navigate(['prod']);
+ addProduit(){
+     /*this.serviceproduit.ajouterProduit(this.newProduit);
+    this.router.navigate(['prod']);*/
 
   };
   

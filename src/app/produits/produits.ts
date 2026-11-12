@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Produit } from '../model/produit';
 import { Serviceproduit } from '../service/serviceproduit';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-produits',
@@ -16,29 +17,32 @@ import { Serviceproduit } from '../service/serviceproduit';
   }
 }*/
 export class Produits implements OnInit {
-  produits: Produit[];
+  produits!: Produit[];
+
   constructor(private serviceproduit: Serviceproduit) {
-    this.produits = this.serviceproduit.listeProduit();
-
-
-    /*this.produits = [
-      { idProduit: 1, nomProduit: 'PC Asus', prixProduit: 3000.600, dateCreation: new Date("01/14/2011") },
-      { idProduit: 2, nomProduit: 'Imprimante Epson', prixProduit: 450, dateCreation: new Date("12/17/2010") },
-      { idProduit: 3, nomProduit: 'Tablette Samsung', prixProduit: 900.123, dateCreation: new Date("02/20/2020") }
-    ];*/
-
   }
   ngOnInit(): void {
-    
+    this.getAllProduits();
   }
+
+getAllProduits() {
+ 
+return this.serviceproduit.listeProduit().subscribe(data => {
+  this.produits = data;
+});
+
   
-  supprimerProduit(prod: Produit) {
+}
+
+ 
+  
+  /*supprimerProduit(prod: Produit) {
     let conf = confirm("Etes-vous sûr ?");  
   if (conf){
     this.serviceproduit.supprimerProduit(prod);
   }
 
-  }
+  }*/
 
 
 
