@@ -31,10 +31,14 @@ export class Produits implements OnInit {
   ngOnInit(): void {
     
   }
-  deleteProduit(produit: Produit) {
-    this.produits=this.produits.filter(p => p.idProduit != produit.idProduit);
+  
+  supprimerProduit(prod: Produit) {
+    let conf = confirm("Etes-vous sûr ?");  
+  if (conf){
+    this.serviceproduit.supprimerProduit(prod);
+  }
 
-}
+  }
 
 
 

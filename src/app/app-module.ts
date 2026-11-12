@@ -7,10 +7,11 @@ import { Produits } from './produits/produits';
 import { AddProduits } from './add-produits/add-produits';
 import { Pagenodefond } from './pagenodefond/pagenodefond';
 import { FormsModule } from '@angular/forms';
+import { UpdateProduit } from './update-produit/update-produit';
 
 @NgModule({
-  declarations: [App, Navbar, Produits, AddProduits, Pagenodefond],
-  imports: [BrowserModule, AppRoutingModule,FormsModule],
+  declarations: [App, Navbar, Produits, AddProduits, Pagenodefond, UpdateProduit],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
